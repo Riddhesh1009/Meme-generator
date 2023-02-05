@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Karla:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
 body {
   margin: 0;
@@ -69,7 +70,39 @@ body {
   border: 0;
 }
 
-.form--img{
-  max-width: 478px;
+.meme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.meme--img{
+  position: absolute;
+    max-width: 478px;
   max-height: 478px;
+}
+
+.meme--toptext{
+  margin: 0;
+  font-size: 21px;
+  font-weight: 400;
+  inline-size: 480px;
+  overflow-wrap: break-word;
+  font-family: 'IBM Plex Mono', monospace;
+  -webkit-text-stroke:0.5px black ;
+  color: white;
+  position: absolute;
+}
+
+.meme--bottomtext{
+  margin: 0;
+  font-size: 21px;
+  font-weight: 400;
+  inline-size: 480px;
+  overflow-wrap: break-word;
+  font-family: 'IBM Plex Mono', monospace;
+  -webkit-text-stroke:0.5px black ;
+  position:absolute;
+  top: 540px;
+  color: white;
+
 }
