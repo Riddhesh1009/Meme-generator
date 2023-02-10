@@ -1,4 +1,4 @@
-import memeData from "../memeData";
+// import memeData from "../memeData";
 import React from "react";
 
 export default function Meme() {
@@ -9,16 +9,23 @@ export default function Meme() {
   });
 
   //All Meme Tempate stored in the below useState
-  const [allMemeImages, setAllMemeImages] = React.useState(memeData.data.memes);
+  // const [allMemes, setAllMemes] = React.useState(memeData.data.memes);
+  const [allMemes, setAllMemes] = React.useState("");
 
+  React.useEffect(function(){
+    fetch("https://api.imgflip.com/get_memes")
+    .then(res=>res.json())
+    .then(data=>setAllMemes(data.data.memes))
+  },[])
+  console.log(allMemes)
 
   // Function to retrieve a new random image
   function getMemeImage() {
-    const memeArray= allMemeImages;
-    const randomnumber = Math.floor(Math.random() * memeArray.length);
+
+    const randomnumber = Math.floor(Math.random() * allMemes.length);
         setMeme(prevMeme=>({
             ...prevMeme,
-            randomImage: memeArray[randomnumber].url
+            randomImage: allMemes[randomnumber].url
         }))
   }
 

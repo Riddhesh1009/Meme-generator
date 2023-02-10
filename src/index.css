@@ -82,27 +82,29 @@ body {
 }
 
 .meme--toptext{
-  margin: 0;
+
+  margin: 2px;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 700;
   inline-size: 480px;
+  text-shadow: 2px 2px 4px whitesmoke;
   overflow-wrap: break-word;
   font-family: 'IBM Plex Mono', monospace;
-  -webkit-text-stroke:0.5px black ;
-  color: white;
   position: absolute;
+  color: rgb(50, 50, 50);
 }
 
 .meme--bottomtext{
-  margin: 0;
+  margin: 2px;
   font-size: 21px;
-  font-weight: 400;
+  font-weight: 700;
   inline-size: 480px;
+  text-shadow: 2px 2px 4px whitesmoke;
   overflow-wrap: break-word;
   font-family: 'IBM Plex Mono', monospace;
-  -webkit-text-stroke:0.5px black ;
+  /* -webkit-text-stroke:1px white ; */
   position:absolute;
   top: 540px;
-  color: white;
+  color: rgb(50, 50, 50);
 
 }
